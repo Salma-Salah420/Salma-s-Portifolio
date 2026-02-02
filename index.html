@@ -379,6 +379,38 @@ section {
                 display: none;
             }
         }
+        .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        color: var(--dark);
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background: #fff;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        width: 200px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        display: none; /* hidden by default */
+    }
+
+    .nav-links.active {
+        display: flex; /* show when active */
+    }
+}
+
     </style>
 </head>
 <body>
